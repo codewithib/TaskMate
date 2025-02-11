@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do app - Created By Yusuf Ibrahim</title>
+    <link rel="stylesheet" href="to-do.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="container">
+                <h1 class="logo">MY TO DO LIST</h1>
+                <form action="#">
+                    <input type="text" name="task-input" class="input-field" id="task-input" placeholder="write anything and hit enter to add">
+                    <button class="add">Add</button>
+                </form>
+
+                <div class="counters">
+                    <p class="display">All Total task : <span id="total">0</span></p>
+                    <p class="display">Todo Done : <span id="done">0</span></p>
+                    <p class="display">Todo in progress : <span id="in-progress">0</span></p>
+                </div>
+
+                <ul class="task-list"></ul>
+                <button class="clear">Clear tasks</button>
+            </div>
+        </section>
+    </main>
+    
+    <!-- <br><br><br><br><br><br><br><br><br><br>
+    <section style="border: 1px solid #000;">
+        <input type="text" name="task-input" id="task-input" placeholder="Enter your task">
+        <button class="add">Add a task</button>
+        <p class="display">All Total task : <span id="total">0</span></p>
+        <p class="display">Todo Done : <span id="done">0</span></p>
+        <p class="display">Todo in progress : <span id="in-progress">0</span></p>
+        <ul class="task-list"></ul>
+        <button class="clear">Clear tasks</button>
+    </section> -->
+
+    <script src="to-do.js"></script>
+</body>
+</html>

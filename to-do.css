@@ -1,0 +1,221 @@
+/* Importing font */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+/* Adding colors to my variable */
+:root {
+    --bg-color: #FCFCFC;
+    --font-color: #5A5A5A;
+    --linear-color: linear-gradient(270deg, #00ff00 -2.84%, #00c853 33.42%, #1de9b6 99.91%);
+    --font: 'Lexend Deca', sans-serif;
+    --primary-color: #00FFC4;
+    --taskinput-bg-color: #1C1D20;
+    --off-white: #F5F5F5;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+html, body {
+    font-family: var(--font);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    background: #0F1114;
+}
+
+
+.container {
+    max-width: 468px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 1rem 1.8rem;
+}
+
+.logo {
+    /* background: #00FFC4;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    background: var(--linear-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+
+
+form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+
+form .input-field {
+    padding: 0.7rem 0.8rem;
+    border-radius: 0.625rem 0rem 0rem 0.625rem;
+    background: #0F1114;
+    border: none;
+    width: 36.6875rem;
+    border: 1.5px solid rgba(221, 221, 221, 0.5);
+    color: #fff;
+    font-weight: 800;
+
+    
+}
+
+form .add {
+    background: var(--linear-color);
+    color: #000;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.6rem 1.3rem;
+    border-radius: 0rem 0.625rem 0rem 0rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.counters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+
+    .display {
+        border: 1.5px solid rgba(221, 221, 221, 0.5);
+        padding: 0.2rem;
+        flex: 1;
+        font-size: 0.76rem;
+        font-weight: 500;
+        background: var(--linear-color);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        
+    }
+}
+
+.task-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.task-list .list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1C1D20;
+    padding: 0.9rem;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 350;
+    border-radius: 0.87rem;
+}
+
+.task-list .list .del-check-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.task-list .list .del-check-container .icon-btn {
+    background: none;
+    border: none;
+}
+
+/* Clear btn styling */
+.clear {
+    background: var(--linear-color);
+    color: #000;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0.6rem 1.3rem;
+    border-radius: 0rem 0.625rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.list.completed {
+    text-decoration: line-through;
+    text-decoration-color: rgba(221, 221, 221, 0.6);
+    color: rgba(221, 221, 221, 0.6);
+}
+
+/* 
+display: inline-block;
+transition: all 0.3s ease;
+
+padding: 0.8rem 2.75rem;
+width: 100%;
+text-align: center;
+border-radius: 0.25rem;
+font-size: 1.125rem;
+font-weight: 400; */
+
+/* button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#task-input {
+    display: inline-block;
+} */
+
+/* .delete-btn {
+   
+} */
+
+/* 
+
+
+.task-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    background: #ddd;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+} */
+
+/* .list::before {
+    content: '';
+    height: 1rem;
+    width: 1rem;
+    position: absolute;
+    border-radius: 50%;
+    background-image: url(asset/unchecked.svg);
+    background-size: cover;
+    background-position: center;
+    left: 1rem;
+    transition: background-image 0.3s ease;
+} */
+
+/* .list-checked::before {
+    background-image: url(asset/checked.svg);
+
+} */
+
+/* .list-checked {
+    text-decoration: line-through;
+    text-decoration-color: yellow;
+} */
