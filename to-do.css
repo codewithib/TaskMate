@@ -40,7 +40,7 @@ body {
     max-width: 468px;
     margin: 0 auto;
     width: 100%;
-    padding: 1rem 1.8rem;
+    padding: 1.3rem 1.8rem;
 }
 
 .logo {
@@ -202,69 +202,3 @@ form .add:hover {
     font-size: 0.8rem;
     color: #fff
 }
-
-
-
-
-/* 
-display: inline-block;
-transition: all 0.3s ease;
-
-padding: 0.8rem 2.75rem;
-width: 100%;
-text-align: center;
-border-radius: 0.25rem;
-font-size: 1.125rem;
-font-weight: 400; */
-
-/* button {
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-#task-input {
-    display: inline-block;
-} */
-
-/* .delete-btn {
-   
-} */
-
-/* 
-
-
-.task-list {
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    background: #ddd;
-}
-
-.list {
-    display: flex;
-    align-items: center;
-} */
-
-/* .list::before {
-    content: '';
-    height: 1rem;
-    width: 1rem;
-    position: absolute;
-    border-radius: 50%;
-    background-image: url(asset/unchecked.svg);
-    background-size: cover;
-    background-position: center;
-    left: 1rem;
-    transition: background-image 0.3s ease;
-} */
-
-/* .list-checked::before {
-    background-image: url(asset/checked.svg);
-
-} */
-
-/* .list-checked {
-    text-decoration: line-through;
-    text-decoration-color: yellow;
-} */
