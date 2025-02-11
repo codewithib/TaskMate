@@ -58,8 +58,6 @@ const addTask = (event) => {
         let isChecked = false;
         completeBtn.innerHTML = uncheckedSVG;
         delCheckContainer.appendChild(completeBtn);
-        
-        
 
         // Toggle event listener
 
@@ -93,7 +91,7 @@ const deleteTask = (event) => {
 
 // function counter to display in progress task
 const inProgressCounter = () => {
-    let displayInProgress = document.querySelector("span#in-progress");
+    let displayInProgress = document.querySelector("span.in-progress");
     let inProgress = document.querySelectorAll("li:not(.completed").length;
     displayInProgress.textContent = inProgress;
 } 
@@ -101,20 +99,25 @@ const inProgressCounter = () => {
 // function to update counter
 
 const updateCounter = () => {
-    let displayDone = document.querySelector("span#done");
+    let displayDone = document.querySelector("span.done");
     let completedTasks = document.querySelectorAll(".completed").length;
     displayDone.textContent = completedTasks;
+
 }
 
 // Function to calculate all total task
 
 const allTaskCounter = () => {
-    let totalDisplay = document.querySelector("span#total");
+    let totalDisplay = document.querySelector("span.total");
     let totalTask = document.querySelectorAll("li").length;
     totalDisplay.textContent = totalTask;
+
 }
+
+
+
 // Calling function for event adding task
-addBtn.addEventListener("click", (addTask), (inProgressCounter));
+addBtn.addEventListener("click", (addTask));
 taskInput.addEventListener("keypress", (event) => {
     if (event.key === "Enter") {
         addTask(event);

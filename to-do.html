@@ -13,16 +13,23 @@
     <main>
         <section>
             <div class="container">
-                <h1 class="logo">MY TO DO LIST</h1>
+                <div class="logo">
+                    <h1 class="logo-text">TaskMate </h1>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="#008000" d="m17.866 15.509l-.98.98l-.98-.978l-1.957-1.957l.977-.977l1.957 1.957l4.891-4.894l.98.977z"/><path fill="#c00000" d="M14.454 21.443h8.303v1.383h-8.303z"/><path fill="#00E32B" d="M2 5.74v23.709h24.909V5.74Zm23.477 22.449l-22.083-.058l.023-20.974h22.077ZM6.151 10.951v5.534h5.534v-5.534ZM10.3 15.1H7.534v-2.766H10.3Zm-4.151 4.22v5.534h5.534v-5.531Zm4.151 4.154H7.534v-2.765H10.3ZM30 2.551V26.24h-1.431L28.549 4l-22.4-.029v-1.42z"/></svg>
+                </div>
+
+                <p class="greeting">Good morning, Ibrahim! What would you love to do today?</p>
+
+                
                 <form action="#">
                     <input type="text" name="task-input" class="input-field" id="task-input" placeholder="write anything and hit enter to add">
                     <button class="add">Add</button>
                 </form>
 
                 <div class="counters">
-                    <p class="display">All Total task : <span id="total">0</span></p>
-                    <p class="display">Todo Done : <span id="done">0</span></p>
-                    <p class="display">Todo in progress : <span id="in-progress">0</span></p>
+                    <p class="display">All Total task : <span class="total">0</span></p>
+                    <p class="display">Todo Done : <span class="done">0</span></p>
+                    <p class="display">Todo in progress : <span class="in-progress">0</span></p>
                 </div>
 
                 <ul class="task-list"></ul>
@@ -30,17 +37,21 @@
             </div>
         </section>
     </main>
-    
-    <!-- <br><br><br><br><br><br><br><br><br><br>
-    <section style="border: 1px solid #000;">
-        <input type="text" name="task-input" id="task-input" placeholder="Enter your task">
-        <button class="add">Add a task</button>
-        <p class="display">All Total task : <span id="total">0</span></p>
-        <p class="display">Todo Done : <span id="done">0</span></p>
-        <p class="display">Todo in progress : <span id="in-progress">0</span></p>
-        <ul class="task-list"></ul>
-        <button class="clear">Clear tasks</button>
-    </section> -->
+
+    <footer>
+        <section>
+            <div class="container">
+                <p class="footer-txt-container">
+                    <span class="footer-txt">&copy; Copyright team Inc 2025 - Developed By Yusuf Ibrahim</span>
+                    <a href="https://github.com/codewithib" target="_blank">
+                        <svg class="flex-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" fill ="#fff"/>
+                        </svg>
+                    </a>
+                </p>
+            </div>
+        </section>
+    </footer>
 
     <script src="to-do.js"></script>
 </body>
