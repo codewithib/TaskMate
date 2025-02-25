@@ -123,6 +123,7 @@ const inProgressCounter = () => {
     let displayInProgress = document.querySelector("span.in-progress");
     let inProgress = document.querySelectorAll("li:not(.completed").length;
     displayInProgress.textContent = inProgress;
+ 
 } 
 
 // function to update counter
@@ -131,6 +132,7 @@ const updateCounter = () => {
     let displayDone = document.querySelector("span.done");
     let completedTasks = document.querySelectorAll(".completed").length;
     displayDone.textContent = completedTasks;
+ 
 
 }
 
@@ -140,6 +142,7 @@ const allTaskCounter = () => {
     let totalDisplay = document.querySelector("span.total");
     let totalTask = document.querySelectorAll("li").length;
     totalDisplay.textContent = totalTask;
+    
 
 }
 
@@ -170,6 +173,8 @@ const loadTask = () => {
         }
         
     }
+
+    updateCounter();
 }
 
 loadTask();
