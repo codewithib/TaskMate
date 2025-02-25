@@ -35,7 +35,7 @@ checkmate/
 ```
 
 ## Future Enhancements
-- [ ] Local storage integration
+- [ ] Local storage integration - Added - Feb 25, 2025
 - [ ] Task categories
 - [ ] Due dates
 - [ ] Priority levels
