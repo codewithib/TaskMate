@@ -195,6 +195,10 @@ form .add:hover {
     transform: scale(1.1);
 }
 
+.list.completed .task-text {
+    font-style: italic;
+}
+
 .footer-txt-container {
     display: inline-flex;
     align-items: center;

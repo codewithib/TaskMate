@@ -7,7 +7,7 @@ const clearBtn = document.querySelector(".clear");
 
 // Creating add task function
 const addTask = (event) => {
-    event.preventDefault();
+    if (event) event.preventDefault();
 
     let taskText = taskInput.value.trim();
 
@@ -18,7 +18,7 @@ const addTask = (event) => {
         return;
     }
 
-    createTaskElement(taskText);
+    createTaskElement(taskText, false);
 
     taskInput.value = "";
 
@@ -28,19 +28,33 @@ const addTask = (event) => {
 
     // Function to create task elemement
 
-const createTaskElement = (taskText) => {
+const createTaskElement = (taskText, isCompleted = false) => {
     let li = document.createElement("li");
-    li.textContent = taskText;
-    taskList.appendChild(li);
     li.classList.toggle("list");
-    inProgressCounter();
-    allTaskCounter();
+
+    // Creating a span for the task text
+    let taskTextSpan = document.createElement("span");
+    taskTextSpan.classList.add("task-text");
+    taskTextSpan.textContent = taskText;
+    li.appendChild(taskTextSpan);
+    // li.textContent = taskText;
+    // taskList.appendChild(li);
+    
+
+    // Add the completed class if this task is completed
+    if (isCompleted) {
+        li.classList.add("completed");
+    }
 
     // Creating a div to group check and delete button
 
     let delCheckContainer = document.createElement("div");
-    li.appendChild(delCheckContainer);
     delCheckContainer.classList.toggle("del-check-container");
+    li.appendChild(delCheckContainer);
+    
+    taskList.appendChild(li);
+    inProgressCounter();
+    allTaskCounter();
 
     // Create a delete button for individual task
     let deleteBtn = document.createElement("button");
@@ -73,8 +87,8 @@ const createTaskElement = (taskText) => {
     let checkedSVG = '<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#00FFC4"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>';
 
     // Set initial state
-    let isChecked = false;
-    completeBtn.innerHTML = uncheckedSVG;
+    let isChecked = isCompleted;
+    completeBtn.innerHTML = isChecked ? checkedSVG : uncheckedSVG;
     delCheckContainer.appendChild(completeBtn);
 
     // Toggle event listener
@@ -97,7 +111,8 @@ const saveTask = () => {
     let getItems = taskList.querySelectorAll("li");
     for (let item of getItems) {
         tasks.push({
-            
+            text: item.childNodes[0].textContent.trim(),
+            completed: item.classList.contains("completed")
         });
     }
 
@@ -108,9 +123,13 @@ const saveTask = () => {
 
 const loadTask = () => {
     const tasks = JSON.parse(localStorage.getItem("tasks") || "[]");
-    for (let taskText of tasks) {
-        createTaskElement(taskText);
-    }
+    for (let task of tasks) {
+        if (typeof task === 'string') {
+            createTaskElement(task);
+        } else {
+            createTaskElement(task.text, task.completed);
+        }
+    } 
 }
 
 // Creating delete tasks function
