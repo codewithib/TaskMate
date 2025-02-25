@@ -96,7 +96,9 @@ const saveTask = () => {
     let tasks = [];
     let getItems = taskList.querySelectorAll("li");
     for (let item of getItems) {
-        tasks.push(item.textContent.trim());
+        tasks.push({
+            
+        });
     }
 
     localStorage.setItem("tasks", JSON.stringify(tasks));
