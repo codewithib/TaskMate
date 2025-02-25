@@ -172,7 +172,7 @@ const loadTask = () => {
     }
 }
 
-loadTask();
+
 
 
 
@@ -186,3 +186,5 @@ taskInput.addEventListener("keypress", (event) => {
 
 // Calling function for delete task
 clearBtn.addEventListener("click", deleteTask);
+
+loadTask();
