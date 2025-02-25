@@ -14,6 +14,7 @@ const addTask = (event) => {
     // Alert to show if task field is empty
     if (taskText === "") {
         alert("Please input your task");
+        return;
     }
 
     // Create and add task
